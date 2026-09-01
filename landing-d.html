@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mise &mdash; D, the partner list</title>
+<script src="vendor/tailwind.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{ink:'#1F2937',paper:'#F9FAFB',line:'#E5E7EB',muted:'#6B7280',accent:'#2563EB',accentsoft:'#EFF6FF',wa:'#25D366'},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],display:['Inter','ui-sans-serif','system-ui','sans-serif']}}}}
+</script>
+<style>.font-display{letter-spacing:-0.022em;font-weight:600}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}input,select,textarea,button{font-family:inherit}
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}</style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+<div class="bg-ink text-white text-xs">
+  <div class="mx-auto max-w-7xl px-6 h-9 flex items-center gap-5">
+    <a href="index.html" class="opacity-50 hover:opacity-100">Layouts</a>
+    <a href="landing-a.html" class="opacity-50 hover:opacity-100">A &middot; Merged</a>
+    <a href="landing-b.html" class="opacity-50 hover:opacity-100">B &middot; Opening timeline</a>
+    <a href="landing-c.html" class="opacity-50 hover:opacity-100">C &middot; Workbench</a>
+    <span class="w-px h-4 bg-white/25"></span>
+    <span class="text-white border-b border-accent pb-[2px]">D &middot; Mailer</span>
+    <a href="directory.html" class="opacity-50 hover:opacity-100">Directory</a>
+    <a href="vendor.html" class="opacity-50 hover:opacity-100 ml-auto">Vendor page &rarr;</a>
+  </div>
+</div>
+
+<header class="bg-paper/90 backdrop-blur sticky top-0 z-40 border-b border-line">
+  <div class="mx-auto max-w-7xl px-6 h-[72px] flex items-center gap-10">
+    <a href="index.html" class="font-display text-2xl tracking-tight">mise<span class="text-accent">.</span></a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-muted"><a href="directory.html" class="hover:text-ink">Full directory</a></nav>
+    <div class="ml-auto flex items-center gap-3">
+      <a href="#" class="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-md bg-wa text-white hover:brightness-95"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.07-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-3 .79.8-2.93-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12s-.64.8-.79.97-.29.19-.54.06a6.7 6.7 0 01-3.3-2.89c-.25-.43.25-.4.71-1.32a.45.45 0 000-.42c-.06-.13-.56-1.35-.77-1.84s-.4-.43-.56-.43h-.48a.92.92 0 00-.67.31A2.8 2.8 0 005.8 11a4.86 4.86 0 001 2.55 11.1 11.1 0 004.26 3.77c1.59.69 2.21.75 3 .63a2.55 2.55 0 001.68-1.19 2.08 2.08 0 00.15-1.18c-.06-.11-.23-.18-.48-.3z"/></svg> WhatsApp us</a>
+    </div>
+  </div>
+</header>
+
+<!-- personalised opening band -->
+<section class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-6 pt-14 pb-12">
+    <p class="text-xs uppercase tracking-[0.18em] text-white/50">Your copy</p>
+    <h1 class="font-display text-4xl md:text-5xl leading-[1.08] mt-4 max-w-3xl"><span id="greetName">Twenty-four suppliers</span><span id="greetTail">, picked for a kitchen that has not opened yet.</span></h1>
+    <p class="mt-6 text-white/70 leading-relaxed max-w-xl">Three suppliers for each of the eight things you have to arrange before you open, in the order you will need them. Region, lead time and years in business on every card, so you can read across the three and pick one.</p>
+    <div class="mt-10 grid grid-cols-3 gap-8 max-w-lg border-t border-white/15 pt-7">
+      <div><p class="font-display text-3xl">24</p><p class="text-sm text-white/50 mt-1">Suppliers</p></div>
+      <div><p class="font-display text-3xl">8</p><p class="text-sm text-white/50 mt-1">Categories</p></div>
+      <div><p class="font-display text-3xl">1,200</p><p class="text-sm text-white/50 mt-1">Openings helped</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- sticky category nav -->
+<div id="jump" class="sticky top-[72px] z-30 bg-white/95 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-7xl px-6 h-[60px] flex items-center gap-1 overflow-x-auto no-scrollbar text-sm">
+    <a href="#fitout" data-jump="fitout" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Fit-out</a><a href="#licensing" data-jump="licensing" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Licensing</a><a href="#kitchen" data-jump="kitchen" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Kitchen equipment</a><a href="#food" data-jump="food" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Food supply</a><a href="#pos" data-jump="pos" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">POS</a><a href="#packaging" data-jump="packaging" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Packaging</a><a href="#staffing" data-jump="staffing" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Staffing</a><a href="#marketing" data-jump="marketing" class="whitespace-nowrap px-3 py-1.5 rounded-md text-muted hover:text-ink hover:bg-paper transition">Marketing</a>
+  </div>
+</div>
+
+<section id="fitout" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">01</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Fit-out and permits</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">Book this first. Eight to twelve weeks for a small unit, and the SCDF and PUB submissions sit inside that window, not after it.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Interior fit-out &amp; renovation</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Fit-out</span><span class="text-muted">&#9733; 4.7 (22)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Studio Kerja</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Design and build for cafes and small restaurants. Handles the URA and SCDF submissions in-house.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Kallang</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">8 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">11 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1552566626?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Fit-out</span><span class="text-muted">&#9733; 4.5 (19)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Rumah Build</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Turnkey renovation for hawker units and small shopfronts, quoted as a fixed-price package.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Paya Lebar</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">6 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">8 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Fit-out</span><span class="text-muted">&#9733; 4.8 (26)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Tan &amp; Sons Carpentry</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Counters, shelving and bar fronts. Takes small jobs without a minimum contract value.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Defu</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">24 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="licensing" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">02</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Licensing and compliance</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">The SFA submission wants a measured layout plan. Most first-timers resubmit twice, which costs three weeks each time.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Licensing, HACCP &amp; compliance</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521791136064?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Licensing</span><span class="text-muted">&#9733; 4.9 (35)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Compliance Partners SG</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">SFA licence applications, HACCP systems and hygiene grading preparation.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Bugis</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">2 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">9 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Licensing</span><span class="text-muted">&#9733; 4.8 (21)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Halal Assist SG</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">MUIS halal certification, from kitchen layout review through to audit day.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Geylang</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">6 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">7 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1497366754035?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Licensing</span><span class="text-muted">&#9733; 4.6 (16)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Safe Table Consultancy</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Food safety systems, staff hygiene training and mock inspections before grading.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Novena</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">6 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kitchen" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">03</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Kitchen equipment</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">Buy the cooking line, lease the cold line. Lead times below are from deposit, not from quote.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Kitchen equipment &amp; refrigeration</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.8 (32)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Commercial ovens, chillers and stainless fabrication. Trade-in accepted on used equipment.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Tuas</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">39 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.9 (48)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Kopi Machinery Co.</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Espresso machines, grinders and water treatment, with barista training included.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Ubi</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">2 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">14 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.7 (14)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Lim Bros Stainless</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Custom stainless benches, sinks and exhaust hoods built to your floor plan.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Sungei Kadut</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">4 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">31 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="food" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">04</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Ingredient supply</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">Start with two per category. Credit terms come after roughly three months of clean payment, so open on cash terms.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Food &amp; ingredient distribution</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1504674900247?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Food supply</span><span class="text-muted">&#9733; 4.5 (61)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Harvest Line Supply</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Dry goods, dairy and frozen. Next-day islandwide delivery from $300 an order.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Jurong</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">Next day</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">17 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1497366754035?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Food supply</span><span class="text-muted">&#9733; 4.6 (28)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Kranji Fresh Produce</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Local and imported vegetables six days a week, with same-day substitutions.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Kranji</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">Daily</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">12 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1504674900247?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Food supply</span><span class="text-muted">&#9733; 4.4 (24)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Seletar Meat &amp; Seafood</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Chilled meat and frozen seafood, cut to spec. Two deliveries a week on standing orders.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Seletar</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">2 days</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">21 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pos" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">05</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">POS and payments</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">You are stuck with the reporting for a year. Check the stock module before the front-of-house screens.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">POS &amp; ordering systems</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1541746972996?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">POS</span><span class="text-muted">&#9733; 4.4 (42)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Ordersure POS</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">QR ordering, PayNow and delivery integrations. Set up in three working days.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Remote</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 days</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">6 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1541746972996?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">POS</span><span class="text-muted">&#9733; 4.6 (19)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Tally Table</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Counter POS with inventory and recipe costing built in. PSG grant claimable.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Remote</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">1 week</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">4 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1590846406792?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">POS</span><span class="text-muted">&#9733; 4.2 (13)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Kiosk Nine</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Self-order kiosks and kitchen display screens for quick-service formats.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Ang Mo Kio</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">5 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packaging" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">06</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Packaging and disposables</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">Four weeks for printed stock. Order plain for the soft opening if the date is tight, printed for the month after.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Packaging &amp; disposables</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Packaging</span><span class="text-muted">&#9733; 4.3 (23)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Packwell Asia</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Custom printed takeaway packaging and cups, MOQ 500, artwork help included.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Loyang</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">4 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">15 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1504674900247?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Packaging</span><span class="text-muted">&#9733; 4.5 (31)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Greenfold Packaging</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Compostable containers and paper cups. Stock lines ship unprinted the same week.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Tuas</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">1 week</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">7 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1552566626?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Packaging</span><span class="text-muted">&#9733; 4.4 (17)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Boxmill SG</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Printed sleeves, carriers and labels. Handles small reprints between large runs.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Woodlands</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">18 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="staffing" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">07</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Opening crew</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">Hire two weeks before soft opening so the training happens in your own kitchen rather than someone else's.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Staffing &amp; recruitment</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521791136064?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Staffing</span><span class="text-muted">&#9733; 4.5 (18)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Crew Collective</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Opening-week service crew and part-timers, plus work pass applications.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Remote</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">1 week</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">6 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Staffing</span><span class="text-muted">&#9733; 4.3 (27)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Shiftwell</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Shift-by-shift cover for kitchen and floor. Booked from a roster app.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Remote</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">3 days</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">3 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556909212?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Staffing</span><span class="text-muted">&#9733; 4.6 (15)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Kitchen Hands SG</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Permanent kitchen hires, from commis to sous. Replacement guarantee at three months.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Bugis</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">4 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">10 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marketing" class="border-t border-line scroll-mt-[132px]">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 lg:gap-16 items-start">
+      <div class="lg:sticky lg:top-[148px]">
+        <p class="font-display text-sm text-accent tracking-[0.14em]">08</p>
+        <h2 class="font-display text-3xl leading-tight mt-3">Menu, photos and launch</h2>
+        <p class="mt-4 text-muted leading-relaxed text-[15px]">Shoot the food before the soft opening. Delivery platforms reject phone photos and the reshoot costs you a fortnight.</p>
+        <p class="mt-5 text-xs uppercase tracking-[0.14em] text-muted">Marketing, photography &amp; branding</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Marketing</span><span class="text-muted">&#9733; 4.7 (20)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Sixth Table Studio</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Menu design and food photography shot in your kitchen, formatted for delivery platforms.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Tiong Bahru</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">2 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">8 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1590846406792?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Marketing</span><span class="text-muted">&#9733; 4.5 (33)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Plate &amp; Pixel</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Launch photography and short-form video for social. Half-day and full-day shoots.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Bras Basah</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">1 week</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">5 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+        <article class="bg-white border border-line rounded-lg overflow-hidden flex flex-col hover:border-accent transition">
+          <a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1552566626?w=640&amp;h=480&amp;fit=crop&amp;crop=entropy&amp;q=72" alt="" class="w-full h-full object-cover"></a>
+          <div class="p-5 flex flex-col flex-1">
+            <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Marketing</span><span class="text-muted">&#9733; 4.4 (12)</span></div>
+            <h3 class="mt-3 font-display text-xl leading-snug"><a href="vendor.html" class="hover:text-accent">Mainstay Brand Co.</a></h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed flex-1">Naming, identity and signage artwork, supplied ready for the fabricator.</p>
+            <dl class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-4">
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Region</dt><dd class="mt-1 text-sm font-medium">Jalan Besar</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">Lead time</dt><dd class="mt-1 text-sm font-medium">5 weeks</dd></div>
+              <div><dt class="text-[10px] uppercase tracking-[0.14em] text-muted">In business</dt><dd class="mt-1 text-sm font-medium">11 yrs</dd></div>
+            </dl>
+            <div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- foot -->
+<section class="border-t border-line bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-start">
+    <div>
+      <h2 class="font-display text-4xl leading-tight">None of these three fit?</h2>
+      <p class="mt-5 text-muted leading-relaxed max-w-md">The twenty-four here are the ones we would send a first-time owner to. The full directory holds 640 verified suppliers across the same eight categories.</p>
+      <a href="directory.html" class="mt-8 inline-block px-5 py-3 rounded-md border border-ink text-sm hover:bg-ink hover:text-white transition">Open the full directory</a>
+    </div>
+    <div class="bg-paper border border-line rounded-lg p-7">
+      <p class="text-xs uppercase tracking-[0.18em] text-muted">Faster</p>
+      <h3 class="font-display text-2xl mt-3">Message us instead</h3>
+      <p class="mt-3 text-sm text-muted leading-relaxed">Tell us what you are opening and when. We will point you at the three or four names on this page that match, and stay out of the conversation after that.</p>
+      <a href="#" class="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-md bg-wa text-white text-sm font-medium hover:brightness-95"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.07-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-3 .79.8-2.93-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12s-.64.8-.79.97-.29.19-.54.06a6.7 6.7 0 01-3.3-2.89c-.25-.43.25-.4.71-1.32a.45.45 0 000-.42c-.06-.13-.56-1.35-.77-1.84s-.4-.43-.56-.43h-.48a.92.92 0 00-.67.31A2.8 2.8 0 005.8 11a4.86 4.86 0 001 2.55 11.1 11.1 0 004.26 3.77c1.59.69 2.21.75 3 .63a2.55 2.55 0 001.68-1.19 2.08 2.08 0 00.15-1.18c-.06-.11-.23-.18-.48-.3z"/></svg> WhatsApp us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-ink text-white/60 border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-4 gap-8 text-sm">
+    <div><p class="font-display text-2xl text-white">mise<span class="text-accent">.</span></p><p class="mt-3 leading-relaxed">The supplier directory for new F&amp;B businesses in Singapore.</p></div>
+    <div><p class="text-white mb-3">Categories</p><ul class="space-y-2"><li><a href="directory.html?category=kitchen" class="hover:text-white">Kitchen equipment</a></li><li><a href="directory.html?category=food" class="hover:text-white">Food distribution</a></li><li><a href="directory.html?category=pos" class="hover:text-white">POS systems</a></li><li><a href="directory.html?category=fitout" class="hover:text-white">Fit-out</a></li></ul></div>
+    <div><p class="text-white mb-3">For suppliers</p><ul class="space-y-2"><li><a href="#" class="hover:text-white">List your business</a></li><li><a href="#" class="hover:text-white">Pricing</a></li><li><a href="#" class="hover:text-white">Success stories</a></li></ul></div>
+    <div><p class="text-white mb-3">Company</p><ul class="space-y-2"><li><a href="#" class="hover:text-white">About</a></li><li><a href="#" class="hover:text-white">Opening guides</a></li><li><a href="#" class="hover:text-white">Contact</a></li></ul></div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs">&copy; 2026 Mise. Layout mockup.</div>
+</footer>
+
+<script>
+// Mailer codes map to the director named on the envelope. Try ?c=A7K2, ?c=R3M9, ?c=T5W1.
+var CODES={A7K2:'Daniel',R3M9:'Serene',T5W1:'Hafiz',K9P4:'Wei Ling'};
+(function(){
+  var code=(new URLSearchParams(location.search).get('c')||'').toUpperCase();
+  var name=CODES[code];
+  if(name){
+    document.getElementById('greetName').textContent=name+',';
+    document.getElementById('greetTail').textContent=' twenty-four suppliers for a kitchen that has not opened yet.';
+  }
+})();
+// jump nav: highlight the section in view
+(function(){
+  var links=[].slice.call(document.querySelectorAll('[data-jump]'));
+  var map={};links.forEach(function(l){map[l.dataset.jump]=l;});
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var l=map[e.target.id];if(!l)return;
+      if(e.isIntersecting){
+        links.forEach(function(x){x.className=x.className.replace(' bg-accentsoft text-accent','');if(x.className.indexOf('text-muted')<0)x.className+=' text-muted';});
+        l.className=l.className.replace(' text-muted','')+' bg-accentsoft text-accent';
+      }
+    });
+  },{rootMargin:'-140px 0px -70% 0px'});
+  [].slice.call(document.querySelectorAll('section[id]')).forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>

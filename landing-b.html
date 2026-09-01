@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mise &mdash; B, opening timeline</title>
+<script src="vendor/tailwind.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{ink:'#1F2937',paper:'#F9FAFB',line:'#E5E7EB',muted:'#6B7280',accent:'#2563EB',accentsoft:'#EFF6FF',wa:'#25D366'},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],display:['Inter','ui-sans-serif','system-ui','sans-serif']}}}}
+</script>
+<style>.font-display{letter-spacing:-0.022em;font-weight:600}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}input,select,textarea,button{font-family:inherit}
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}</style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+<div class="bg-ink text-white text-xs">
+  <div class="mx-auto max-w-7xl px-6 h-9 flex items-center gap-5">
+    <a href="index.html" class="opacity-50 hover:opacity-100">Layouts</a>
+    <a href="landing-a.html" class="opacity-50 hover:opacity-100">A · Merged</a>
+    <span class="text-white border-b border-accent pb-[2px]">B · Opening timeline</span>
+    <a href="landing-c.html" class="opacity-50 hover:opacity-100">C · Workbench</a>
+    <span class="w-px h-4 bg-white/25"></span>
+    <a href="landing-d.html" class="opacity-50 hover:opacity-100">D · Mailer</a>
+    <a href="directory.html" class="opacity-50 hover:opacity-100">Directory</a>
+    <a href="vendor.html" class="opacity-50 hover:opacity-100 ml-auto">Vendor page &rarr;</a>
+  </div>
+</div>
+<header class="bg-paper/90 backdrop-blur sticky top-0 z-40 border-b border-line">
+  <div class="mx-auto max-w-7xl px-6 h-[72px] flex items-center gap-10">
+    <a href="index.html" class="font-display text-2xl tracking-tight">mise<span class="text-accent">.</span></a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-muted"><a href="#timeline" class="hover:text-ink">The timeline</a><a href="#featured" class="hover:text-ink">Supplier of the month</a><a href="directory.html" class="hover:text-ink">Directory</a><a href="#" class="hover:text-ink">Guides</a></nav>
+    <div class="ml-auto flex items-center gap-3">
+      <a href="#" class="hidden sm:inline-flex text-sm px-4 py-2 rounded-md border border-line hover:border-ink">List your business</a>
+      <a href="#" class="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-md bg-wa text-white hover:brightness-95"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.07-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-3 .79.8-2.93-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12s-.64.8-.79.97-.29.19-.54.06a6.7 6.7 0 01-3.3-2.89c-.25-.43.25-.4.71-1.32a.45.45 0 000-.42c-.06-.13-.56-1.35-.77-1.84s-.4-.43-.56-.43h-.48a.92.92 0 00-.67.31A2.8 2.8 0 005.8 11a4.86 4.86 0 001 2.55 11.1 11.1 0 004.26 3.77c1.59.69 2.21.75 3 .63a2.55 2.55 0 001.68-1.19 2.08 2.08 0 00.15-1.18c-.06-.11-.23-.18-.48-.3z"/></svg> WhatsApp us</a>
+    </div>
+  </div>
+</header>
+
+<!-- compact dark hero carrying the spine -->
+<section class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-6 pt-16 pb-10">
+    <div class="grid lg:grid-cols-[1.3fr_1fr] gap-12 items-end">
+      <div>
+        <p class="text-xs uppercase tracking-[0.18em] text-white/50">Singapore &middot; 640 verified suppliers</p>
+        <h1 class="font-display text-5xl xl:text-[58px] leading-[1.04] mt-5">Opening a place takes eight moves. Here is who handles each one.</h1>
+      </div>
+      <p class="text-white/70 leading-relaxed lg:pb-2">Not a category list. The sequence most operators follow, from signing the unit to training the opening team, with the vendors who do that step underneath it.</p>
+    </div>
+    <div class="mt-12 flex gap-2 overflow-x-auto no-scrollbar pb-1 text-sm"><a href="#step1" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">1</span><span class="text-white/80 whitespace-nowrap">Secure the unit and check the zoning</span></a><a href="#step2" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">2</span><span class="text-white/80 whitespace-nowrap">Apply for the SFA food shop licence</span></a><a href="#step3" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">3</span><span class="text-white/80 whitespace-nowrap">Commission the fit-out and permits</span></a><a href="#step4" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">4</span><span class="text-white/80 whitespace-nowrap">Buy or lease kitchen equipment</span></a><a href="#step5" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">5</span><span class="text-white/80 whitespace-nowrap">Line up ingredient suppliers and terms</span></a><a href="#step6" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">6</span><span class="text-white/80 whitespace-nowrap">Choose a POS and payment setup</span></a><a href="#step7" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">7</span><span class="text-white/80 whitespace-nowrap">Order packaging and disposables</span></a><a href="#step8" class="shrink-0 flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:border-white/40 transition"><span class="font-display text-white/40">8</span><span class="text-white/80 whitespace-nowrap">Hire and train the opening team</span></a></div>
+  </div>
+</section>
+
+<!-- sticky search bar -->
+<div class="sticky top-[72px] z-30 bg-white/95 backdrop-blur border-b border-line">
+  <div class="mx-auto max-w-7xl px-6 py-3 flex items-center gap-3">
+    <div class="flex items-center gap-3 flex-1 bg-paper border border-line rounded-lg px-4 py-2.5">
+      <svg viewBox="0 0 24 24" class="w-5 h-5 text-muted shrink-0" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input class="w-full bg-transparent outline-none text-[15px] placeholder:text-muted/70" placeholder="Search 640 suppliers, or jump to a step">
+    </div>
+    <a href="directory.html" class="text-sm px-5 py-2.5 rounded-lg bg-ink text-white font-medium hover:bg-accent transition whitespace-nowrap">Browse all</a>
+    <a href="#shortlist" class="hidden md:inline-block text-sm px-5 py-2.5 rounded-lg border border-line hover:border-ink whitespace-nowrap">Get a shortlist</a>
+  </div>
+</div>
+
+<div id="timeline" class="pb-10">
+<section id="step1" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">1</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 1 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Secure the unit and check the zoning</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Change of use, gross floor area, grease trap and ventilation. Get this wrong and the licence stalls.</p>
+      <a href="directory.html?category=fitout" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 12 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Studio Kerja</a></h3><p class="text-sm text-muted mt-1">Kallang &middot; &#9733; 4.7 (22)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Rumah Build</a></h3><p class="text-sm text-muted mt-1">Paya Lebar &middot; &#9733; 4.5 (19)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Ninetyfive Interiors</a></h3><p class="text-sm text-muted mt-1">Tai Seng &middot; &#9733; 4.4 (11)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Tan &amp; Sons Carpentry</a></h3><p class="text-sm text-muted mt-1">Defu &middot; &#9733; 4.8 (26)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="step2" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">2</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 2 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Apply for the SFA food shop licence</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">The submission wants a layout plan, not a sketch. Most first-timers resubmit twice.</p>
+      <a href="directory.html?category=licensing" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 24 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Compliance Partners SG</a></h3><p class="text-sm text-muted mt-1">Bugis &middot; &#9733; 4.9 (35)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Halal Assist SG</a></h3><p class="text-sm text-muted mt-1">Geylang &middot; &#9733; 4.8 (21)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Safe Table Consultancy</a></h3><p class="text-sm text-muted mt-1">Novena &middot; &#9733; 4.6 (16)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3><p class="text-sm text-muted mt-1">Tuas &middot; &#9733; 4.8 (32)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="step3" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">3</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 3 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Commission the fit-out and permits</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Design, build, SCDF and PUB submissions. Eight to twelve weeks for a small unit.</p>
+      <a href="directory.html?category=fitout" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 89 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Studio Kerja</a></h3><p class="text-sm text-muted mt-1">Kallang &middot; &#9733; 4.7 (22)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Rumah Build</a></h3><p class="text-sm text-muted mt-1">Paya Lebar &middot; &#9733; 4.5 (19)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Ninetyfive Interiors</a></h3><p class="text-sm text-muted mt-1">Tai Seng &middot; &#9733; 4.4 (11)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Tan &amp; Sons Carpentry</a></h3><p class="text-sm text-muted mt-1">Defu &middot; &#9733; 4.8 (26)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="step4" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">4</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 4 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Buy or lease kitchen equipment</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Buy the cooking line, lease the cold line. Trade-in stock is half the price of new.</p>
+      <a href="directory.html?category=kitchen" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 118 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3><p class="text-sm text-muted mt-1">Tuas &middot; &#9733; 4.8 (32)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Northpoint Coldchain</a></h3><p class="text-sm text-muted mt-1">Woodlands &middot; &#9733; 4.6 (17)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kopi Machinery Co.</a></h3><p class="text-sm text-muted mt-1">Ubi &middot; &#9733; 4.9 (48)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Lim Bros Stainless</a></h3><p class="text-sm text-muted mt-1">Sungei Kadut &middot; &#9733; 4.7 (14)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+
+<!-- supplier of the month, interrupting the timeline -->
+<section id="featured" class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-[1fr_1fr] gap-14 items-center">
+    <a href="vendor.html" class="block aspect-[4/3] rounded-lg overflow-hidden bg-white/10">
+      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1000&h=750&fit=crop&crop=entropy&q=72" alt="" class="w-full h-full object-cover hover:scale-[1.02] transition duration-500">
+    </a>
+    <div>
+      <p class="text-xs uppercase tracking-[0.18em] text-white/50">Supplier of the month &middot; step 4</p>
+      <h2 class="font-display text-4xl leading-tight mt-4">Teck Seng has fitted out 400 kitchens. They will tell you what not to buy.</h2>
+      <p class="mt-5 text-white/70 leading-relaxed">Thirty-eight years in Tuas, three generations, and a showroom full of trade-in combi ovens. For a first caf&eacute;, Ah Seng will talk you out of half your equipment list before he quotes you. That is why operators keep sending people here.</p>
+      <p class="mt-6 text-sm text-white/50">&#9733; 4.8 &middot; 32 reviews &middot; Tuas &middot; Since 1987</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="#" class="text-sm px-5 py-3 rounded-md bg-wa text-white font-medium hover:brightness-95">WhatsApp</a>
+        <a href="vendor.html" class="text-sm px-5 py-3 rounded-md border border-white/30 hover:bg-white hover:text-ink transition">Read profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step5" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">5</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 5 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Line up ingredient suppliers and terms</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Start with two per category. Terms come after three months of clean payment.</p>
+      <a href="directory.html?category=food" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 143 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Harvest Line Supply</a></h3><p class="text-sm text-muted mt-1">Jurong &middot; &#9733; 4.5 (61)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kranji Fresh Produce</a></h3><p class="text-sm text-muted mt-1">Kranji &middot; &#9733; 4.6 (28)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3><p class="text-sm text-muted mt-1">Tuas &middot; &#9733; 4.8 (32)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Northpoint Coldchain</a></h3><p class="text-sm text-muted mt-1">Woodlands &middot; &#9733; 4.6 (17)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="step6" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">6</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 6 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Choose a POS and payment setup</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Whatever you pick, you are stuck with its reporting for a year. Check the stock module.</p>
+      <a href="directory.html?category=pos" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 37 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Ordersure POS</a></h3><p class="text-sm text-muted mt-1">Remote &middot; &#9733; 4.4 (42)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3><p class="text-sm text-muted mt-1">Tuas &middot; &#9733; 4.8 (32)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Northpoint Coldchain</a></h3><p class="text-sm text-muted mt-1">Woodlands &middot; &#9733; 4.6 (17)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kopi Machinery Co.</a></h3><p class="text-sm text-muted mt-1">Ubi &middot; &#9733; 4.9 (48)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="step7" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">7</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 7 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Order packaging and disposables</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Four weeks for printed stock. Order plain first if the opening date is tight.</p>
+      <a href="directory.html?category=packaging" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 62 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Packwell Asia</a></h3><p class="text-sm text-muted mt-1">Loyang &middot; &#9733; 4.3 (23)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3><p class="text-sm text-muted mt-1">Tuas &middot; &#9733; 4.8 (32)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Northpoint Coldchain</a></h3><p class="text-sm text-muted mt-1">Woodlands &middot; &#9733; 4.6 (17)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kopi Machinery Co.</a></h3><p class="text-sm text-muted mt-1">Ubi &middot; &#9733; 4.9 (48)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="step8" class="mx-auto max-w-7xl px-6">
+  <div class="grid lg:grid-cols-[300px_1fr] gap-12 border-t border-line py-14">
+    <div class="lg:sticky lg:top-[150px] lg:self-start">
+      <div class="flex items-baseline gap-3">
+        <span class="font-display text-[64px] leading-none text-line">8</span>
+        <span class="text-xs uppercase tracking-[0.18em] text-muted">Step 8 of 8</span>
+      </div>
+      <h2 class="font-display text-2xl leading-snug mt-5">Hire and train the opening team</h2>
+      <p class="mt-3 text-muted text-sm leading-relaxed">Hire two weeks before soft opening so training happens in your own kitchen.</p>
+      <a href="directory.html?category=staffing" class="mt-6 inline-flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">All 31 suppliers &rarr;</a>
+    </div>
+    <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2">
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Crew Collective</a></h3><p class="text-sm text-muted mt-1">Remote &middot; &#9733; 4.5 (18)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3><p class="text-sm text-muted mt-1">Tuas &middot; &#9733; 4.8 (32)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Northpoint Coldchain</a></h3><p class="text-sm text-muted mt-1">Woodlands &middot; &#9733; 4.6 (17)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+        <article class="w-[270px] shrink-0 border border-line rounded-lg overflow-hidden bg-white hover:border-accent transition"><a href="vendor.html" class="block aspect-[4/3] bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=580&h=435&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a><div class="p-5"><h3 class="font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kopi Machinery Co.</a></h3><p class="text-sm text-muted mt-1">Ubi &middot; &#9733; 4.9 (48)</p><div class="mt-4 flex gap-2"><a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium hover:brightness-95">WhatsApp</a><a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a></div></div></article>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- operator note -->
+<section class="border-t border-line bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-10">
+    <figure><p class="text-sm text-[#F59E0B]">&#9733;&#9733;&#9733;&#9733;&#9733;</p><blockquote class="mt-3 leading-relaxed">"We had a fortnight to replace a dead chiller before opening. WhatsApped three suppliers on a Sunday, had a quote by Monday morning."</blockquote><figcaption class="mt-4 text-sm text-muted">Nadia Rahim &middot; Kopi &amp; Kueh, Tiong Bahru</figcaption></figure>
+    <figure><p class="text-sm text-[#F59E0B]">&#9733;&#9733;&#9733;&#9733;&#9733;</p><blockquote class="mt-3 leading-relaxed">"The licensing consultants alone saved us six weeks. First-time owners have no idea what SFA actually wants in the submission."</blockquote><figcaption class="mt-4 text-sm text-muted">Marcus Teo &middot; Third Shift, Joo Chiat</figcaption></figure>
+    <figure><p class="text-sm text-[#F59E0B]">&#9733;&#9733;&#9733;&#9733;&#9734;</p><blockquote class="mt-3 leading-relaxed">"Doing it in this order is the part nobody tells you. We bought equipment before the fit-out drawings and paid for it twice."</blockquote><figcaption class="mt-4 text-sm text-muted">Priya Menon &middot; Amma's Table, Little India</figcaption></figure>
+  </div>
+</section>
+
+<section id="shortlist" class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-start">
+    <div>
+      <p class="text-xs uppercase tracking-[0.18em] text-white/50">Curated shortlist</p>
+      <h2 class="font-display text-4xl leading-tight mt-4">Not sure where to start?</h2>
+      <p class="mt-5 text-white/70 leading-relaxed max-w-md">Tell us what you need and we will send you four or five curated vendors for your perusal. No obligation to enquire with any of them.</p>
+      <ul class="mt-7 space-y-2.5 text-sm text-white/60">
+        <li>Matched to your concept, budget and opening date.</li>
+        <li>Each one has worked with a first-time owner in the last year.</li>
+        <li>You choose who to contact. We do not pass on your number.</li>
+      </ul>
+      <a href="#" class="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-md bg-wa text-white font-medium hover:brightness-95"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.07-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-3 .79.8-2.93-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12s-.64.8-.79.97-.29.19-.54.06a6.7 6.7 0 01-3.3-2.89c-.25-.43.25-.4.71-1.32a.45.45 0 000-.42c-.06-.13-.56-1.35-.77-1.84s-.4-.43-.56-.43h-.48a.92.92 0 00-.67.31A2.8 2.8 0 005.8 11a4.86 4.86 0 001 2.55 11.1 11.1 0 004.26 3.77c1.59.69 2.21.75 3 .63a2.55 2.55 0 001.68-1.19 2.08 2.08 0 00.15-1.18c-.06-.11-.23-.18-.48-.3z"/></svg> Ask on WhatsApp instead</a>
+    </div>
+    <form class="bg-white text-ink rounded-lg p-7">
+      <h3 class="font-medium">Tell us what you need</h3>
+      <div class="mt-5 grid sm:grid-cols-2 gap-3">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Your name">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Business name">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Mobile">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Target opening date">
+      </div>
+      <textarea rows="3" class="mt-3 w-full border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="What are you opening? e.g. 40-seat caf&eacute;, need equipment and fit-out"></textarea>
+      <button class="mt-4 w-full bg-ink text-white rounded-lg py-3 text-sm font-medium hover:bg-accent transition">Get my shortlist</button>
+      <p class="mt-3 text-xs text-muted">We reply by WhatsApp within one working day.</p>
+    </form>
+  </div>
+</section>
+<footer class="bg-ink text-white/60 border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-4 gap-8 text-sm">
+    <div><p class="font-display text-2xl text-white">mise<span class="text-accent">.</span></p><p class="mt-3 leading-relaxed">The supplier directory for new F&amp;B businesses in Singapore.</p></div>
+    <div><p class="text-white mb-3">Categories</p><ul class="space-y-2"><li><a href="directory.html?category=kitchen" class="hover:text-white">Kitchen equipment</a></li><li><a href="directory.html?category=food" class="hover:text-white">Food distribution</a></li><li><a href="directory.html?category=pos" class="hover:text-white">POS systems</a></li><li><a href="directory.html?category=fitout" class="hover:text-white">Fit-out</a></li></ul></div>
+    <div><p class="text-white mb-3">For suppliers</p><ul class="space-y-2"><li><a href="#" class="hover:text-white">List your business</a></li><li><a href="#" class="hover:text-white">Pricing</a></li><li><a href="#" class="hover:text-white">Success stories</a></li></ul></div>
+    <div><p class="text-white mb-3">Company</p><ul class="space-y-2"><li><a href="#" class="hover:text-white">About</a></li><li><a href="#" class="hover:text-white">Opening guides</a></li><li><a href="#" class="hover:text-white">Contact</a></li></ul></div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs">&copy; 2026 Mise. Layout mockup.</div>
+</footer>
+
+</body>
+</html>

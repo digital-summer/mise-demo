@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mise &mdash; C, workbench</title>
+<script src="vendor/tailwind.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{ink:'#1F2937',paper:'#F9FAFB',line:'#E5E7EB',muted:'#6B7280',accent:'#2563EB',accentsoft:'#EFF6FF',wa:'#25D366'},fontFamily:{sans:['Inter','ui-sans-serif','system-ui','sans-serif'],display:['Inter','ui-sans-serif','system-ui','sans-serif']}}}}
+</script>
+<style>.font-display{letter-spacing:-0.022em;font-weight:600}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}input,select,textarea,button{font-family:inherit}
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}</style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+<div class="bg-ink text-white text-xs">
+  <div class="mx-auto max-w-7xl px-6 h-9 flex items-center gap-5">
+    <a href="index.html" class="opacity-50 hover:opacity-100">Layouts</a>
+    <a href="landing-a.html" class="opacity-50 hover:opacity-100">A · Merged</a>
+    <a href="landing-b.html" class="opacity-50 hover:opacity-100">B · Opening timeline</a>
+    <span class="text-white border-b border-accent pb-[2px]">C · Workbench</span>
+    <span class="w-px h-4 bg-white/25"></span>
+    <a href="landing-d.html" class="opacity-50 hover:opacity-100">D · Mailer</a>
+    <a href="directory.html" class="opacity-50 hover:opacity-100">Directory</a>
+    <a href="vendor.html" class="opacity-50 hover:opacity-100 ml-auto">Vendor page &rarr;</a>
+  </div>
+</div>
+<header class="bg-paper/90 backdrop-blur sticky top-0 z-40 border-b border-line">
+  <div class="mx-auto max-w-7xl px-6 h-[72px] flex items-center gap-10">
+    <a href="index.html" class="font-display text-2xl tracking-tight">mise<span class="text-accent">.</span></a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-muted"><a href="directory.html" class="hover:text-ink">Directory</a><a href="#checklist" class="hover:text-ink">Start here</a><a href="#" class="hover:text-ink">Guides</a></nav>
+    <div class="ml-auto flex items-center gap-3">
+      <a href="#" class="hidden sm:inline-flex text-sm px-4 py-2 rounded-md border border-line hover:border-ink">List your business</a>
+      <a href="#" class="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-md bg-wa text-white hover:brightness-95"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.07-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-3 .79.8-2.93-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12s-.64.8-.79.97-.29.19-.54.06a6.7 6.7 0 01-3.3-2.89c-.25-.43.25-.4.71-1.32a.45.45 0 000-.42c-.06-.13-.56-1.35-.77-1.84s-.4-.43-.56-.43h-.48a.92.92 0 00-.67.31A2.8 2.8 0 005.8 11a4.86 4.86 0 001 2.55 11.1 11.1 0 004.26 3.77c1.59.69 2.21.75 3 .63a2.55 2.55 0 001.68-1.19 2.08 2.08 0 00.15-1.18c-.06-.11-.23-.18-.48-.3z"/></svg> WhatsApp us</a>
+    </div>
+  </div>
+</header>
+
+<!-- command bar, no hero -->
+<section class="bg-white border-b border-line">
+  <div class="mx-auto max-w-[1400px] px-6 py-7">
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+      <h1 class="font-display text-xl">640 suppliers for new F&amp;B businesses in Singapore</h1>
+      <p class="text-sm text-muted">8 categories &middot; 1,200 openings helped &middot; updated weekly</p>
+    </div>
+    <div class="mt-4 flex flex-col md:flex-row gap-3">
+      <div class="flex items-center gap-3 flex-1 bg-paper border border-line rounded-lg px-4 py-3">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-muted shrink-0" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input class="w-full bg-transparent outline-none text-[15px] placeholder:text-muted/70" placeholder="Combi oven, halal supplier, SFA licence, MOQ 500 cups&hellip;">
+      </div>
+      <a href="directory.html" class="grid place-items-center bg-ink text-white rounded-lg px-8 py-3 text-sm font-medium hover:bg-accent transition">Search</a>
+    </div>
+    <div class="mt-3 flex flex-wrap gap-2 text-sm">
+      <a href="directory.html?category=kitchen" class="px-3 py-1.5 rounded-md bg-accentsoft text-accent border border-accent/20">Combi oven</a>
+      <a href="directory.html?category=food" class="px-3 py-1.5 rounded-md bg-paper border border-line hover:border-ink">Halal ingredients</a>
+      <a href="directory.html?category=licensing" class="px-3 py-1.5 rounded-md bg-paper border border-line hover:border-ink">SFA licence</a>
+      <a href="directory.html?category=packaging" class="px-3 py-1.5 rounded-md bg-paper border border-line hover:border-ink">Takeaway boxes</a>
+      <a href="directory.html?category=fitout" class="px-3 py-1.5 rounded-md bg-paper border border-line hover:border-ink">Permit submissions</a>
+      <a href="directory.html?category=pos" class="px-3 py-1.5 rounded-md bg-paper border border-line hover:border-ink">PSG grant POS</a>
+    </div>
+  </div>
+</section>
+
+<div class="mx-auto max-w-[1400px] px-6 py-8 grid lg:grid-cols-[230px_1fr] xl:grid-cols-[230px_1fr_300px] gap-8">
+
+  <!-- left: category nav -->
+  <aside class="hidden lg:block lg:sticky lg:top-[92px] lg:self-start">
+    <p class="text-xs uppercase tracking-[0.14em] text-muted px-3">Categories</p>
+    <ul class="mt-3 text-sm text-muted -mx-1">
+        <li><a href="#cat-kitchen" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16"/><path d="M8 13.5h8"/></svg></span><span class="flex-1">Kitchen equipment &amp; refrigeration</span><span class="text-xs text-muted">118</span></a></li>
+        <li><a href="#cat-food" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10.5h3.6L21 14v2h-7z"/><circle cx="7" cy="18.2" r="1.6"/><circle cx="17" cy="18.2" r="1.6"/></svg></span><span class="flex-1">Food &amp; ingredient distribution</span><span class="text-xs text-muted">143</span></a></li>
+        <li><a href="#cat-pos" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19"/><path d="M6 15h4"/></svg></span><span class="flex-1">POS &amp; ordering systems</span><span class="text-xs text-muted">37</span></a></li>
+        <li><a href="#cat-packaging" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5"/><path d="M12 12v9"/></svg></span><span class="flex-1">Packaging &amp; disposables</span><span class="text-xs text-muted">62</span></a></li>
+        <li><a href="#cat-fitout" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 17.2L17.2 3.5l3.3 3.3L6.8 20.5z"/><path d="M8 8.2l2 2M11.2 5l2 2"/></svg></span><span class="flex-1">Interior fit-out &amp; renovation</span><span class="text-xs text-muted">89</span></a></li>
+        <li><a href="#cat-licensing" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 3h6v3.2H9z"/><path d="M9.2 13.2l2 2 3.8-4"/></svg></span><span class="flex-1">Licensing, HACCP &amp; compliance</span><span class="text-xs text-muted">24</span></a></li>
+        <li><a href="#cat-staffing" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.2" cy="8.2" r="3.2"/><path d="M3.2 20a6 6 0 0112 0"/><path d="M16.2 5.6a3 3 0 010 5.6"/></svg></span><span class="flex-1">Staffing &amp; recruitment</span><span class="text-xs text-muted">31</span></a></li>
+        <li><a href="#cat-marketing" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white hover:text-ink transition"><span class="text-muted"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7l1.4-2.4h3.2L15 7"/><circle cx="12" cy="13.4" r="3.3"/></svg></span><span class="flex-1">Marketing, photography &amp; branding</span><span class="text-xs text-muted">56</span></a></li>
+    </ul>
+    <a href="directory.html" class="mt-4 block text-sm px-3 py-2 text-accent hover:underline">Open full directory &rarr;</a>
+    <div class="mt-6 border-t border-line pt-5 px-3">
+      <p class="text-xs uppercase tracking-[0.14em] text-muted">Filters</p>
+      <div class="mt-3 space-y-2.5 text-sm">
+        <label class="flex items-center gap-2.5"><input type="checkbox" class="accent-[#2563EB] w-4 h-4"> Works with first-timers</label>
+        <label class="flex items-center gap-2.5"><input type="checkbox" class="accent-[#2563EB] w-4 h-4"> Halal certified</label>
+        <label class="flex items-center gap-2.5"><input type="checkbox" class="accent-[#2563EB] w-4 h-4"> Low MOQ</label>
+        <label class="flex items-center gap-2.5"><input type="checkbox" class="accent-[#2563EB] w-4 h-4"> Under 2 week lead</label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- middle: pinned feature then the stream -->
+  <main class="space-y-12 min-w-0">
+
+    <article class="border border-line rounded-lg bg-white overflow-hidden grid md:grid-cols-[300px_1fr]">
+      <a href="vendor.html" class="block aspect-[4/3] md:aspect-auto bg-line overflow-hidden"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=700&h=700&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+      <div class="p-7">
+        <p class="text-xs uppercase tracking-[0.18em] text-accent">Supplier of the month</p>
+        <h2 class="font-display text-2xl leading-snug mt-3">Teck Seng has fitted out 400 kitchens. They will tell you what not to buy.</h2>
+        <p class="mt-3 text-sm text-muted leading-relaxed">Thirty-eight years in Tuas, three generations, and a showroom full of trade-in combi ovens. For a first caf&eacute;, Ah Seng will talk you out of half your equipment list before he quotes you.</p>
+        <p class="mt-4 text-xs text-muted">&#9733; 4.8 &middot; 32 reviews &middot; Tuas &middot; Since 1987</p>
+        <div class="mt-5 flex gap-2">
+          <a href="#" class="text-sm px-4 py-2 rounded-md bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">Read profile</a>
+        </div>
+      </div>
+    </article>
+
+  <section id="cat-kitchen" class="scroll-mt-[150px]">
+    <div class="sticky top-[73px] z-20 bg-paper/95 backdrop-blur border-b border-line py-3 flex items-center gap-4">
+      <span class="w-8 h-8 rounded-md bg-accentsoft text-accent grid place-items-center shrink-0"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16"/><path d="M8 13.5h8"/></svg></span>
+      <div class="min-w-0"><h2 class="font-display text-lg leading-tight truncate">Kitchen equipment &amp; refrigeration</h2><p class="text-xs text-muted">118 suppliers</p></div>
+      <a href="directory.html?category=kitchen" class="ml-auto text-sm text-muted hover:text-ink whitespace-nowrap">View all &rarr;</a>
+    </div>
+    <p class="mt-4 text-sm text-muted leading-relaxed max-w-3xl">Combi ovens, chillers, cold rooms and stainless fabrication. Most of these suppliers will lease or trade in, which matters when the fit-out has already eaten the budget.</p>
+    <div class="mt-4 space-y-3">
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="kitchen">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.8 (32)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Commercial ovens, chillers and stainless fabrication. Trade-in on used equipment.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Tuas</span><span class="px-2 py-1 border border-line rounded">3 wk lead</span><span class="px-2 py-1 border border-line rounded">Since 1987</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="kitchen">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.6 (17)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Northpoint Coldchain</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Walk-in chillers and freezers, installation and 24-hour servicing contracts.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Woodlands</span><span class="px-2 py-1 border border-line rounded">5 wk lead</span><span class="px-2 py-1 border border-line rounded">24h service</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="kitchen">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.9 (48)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kopi Machinery Co.</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Espresso machines, grinders and water treatment. Barista training included.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Ubi</span><span class="px-2 py-1 border border-line rounded">2 wk lead</span><span class="px-2 py-1 border border-line rounded">Low MOQ</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="cat-fitout" class="scroll-mt-[150px]">
+    <div class="sticky top-[73px] z-20 bg-paper/95 backdrop-blur border-b border-line py-3 flex items-center gap-4">
+      <span class="w-8 h-8 rounded-md bg-accentsoft text-accent grid place-items-center shrink-0"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 17.2L17.2 3.5l3.3 3.3L6.8 20.5z"/><path d="M8 8.2l2 2M11.2 5l2 2"/></svg></span>
+      <div class="min-w-0"><h2 class="font-display text-lg leading-tight truncate">Interior fit-out &amp; renovation</h2><p class="text-xs text-muted">89 suppliers</p></div>
+      <a href="directory.html?category=fitout" class="ml-auto text-sm text-muted hover:text-ink whitespace-nowrap">View all &rarr;</a>
+    </div>
+    <p class="mt-4 text-sm text-muted leading-relaxed max-w-3xl">Design and build for cafes, restaurants and central kitchens. The ones worth using handle the URA change of use and SCDF submissions themselves.</p>
+    <div class="mt-4 space-y-3">
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="fitout">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Fit-out</span><span class="text-muted">&#9733; 4.7 (22)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Studio Kerja</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Design and build for cafes and small restaurants. Handles URA and SCDF submissions.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Kallang</span><span class="px-2 py-1 border border-line rounded">8 wk build</span><span class="px-2 py-1 border border-line rounded">Permits</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="fitout">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Fit-out</span><span class="text-muted">&#9733; 4.5 (19)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Rumah Build</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Turnkey renovation for hawker units and small shopfronts. Fixed-price packages.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Paya Lebar</span><span class="px-2 py-1 border border-line rounded">6 wk build</span><span class="px-2 py-1 border border-line rounded">Fixed price</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="fitout">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Fit-out</span><span class="text-muted">&#9733; 4.4 (11)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Ninetyfive Interiors</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Interior design and joinery for F&amp;B, with 3D visuals before you commit.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Tai Seng</span><span class="px-2 py-1 border border-line rounded">10 wk build</span><span class="px-2 py-1 border border-line rounded">3D visuals</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="cat-licensing" class="scroll-mt-[150px]">
+    <div class="sticky top-[73px] z-20 bg-paper/95 backdrop-blur border-b border-line py-3 flex items-center gap-4">
+      <span class="w-8 h-8 rounded-md bg-accentsoft text-accent grid place-items-center shrink-0"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 3h6v3.2H9z"/><path d="M9.2 13.2l2 2 3.8-4"/></svg></span>
+      <div class="min-w-0"><h2 class="font-display text-lg leading-tight truncate">Licensing, HACCP &amp; compliance</h2><p class="text-xs text-muted">24 suppliers</p></div>
+      <a href="directory.html?category=licensing" class="ml-auto text-sm text-muted hover:text-ink whitespace-nowrap">View all &rarr;</a>
+    </div>
+    <p class="mt-4 text-sm text-muted leading-relaxed max-w-3xl">SFA food shop licences, halal certification, HACCP systems and hygiene grading. First-time owners lose the most weeks here, so start early.</p>
+    <div class="mt-4 space-y-3">
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="licensing">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Licensing</span><span class="text-muted">&#9733; 4.9 (35)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Compliance Partners SG</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">SFA licence applications, HACCP systems and hygiene grading preparation.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Bugis</span><span class="px-2 py-1 border border-line rounded">2 wk</span><span class="px-2 py-1 border border-line rounded">SFA &amp; HACCP</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="licensing">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Licensing</span><span class="text-muted">&#9733; 4.8 (21)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Halal Assist SG</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">MUIS halal certification from kitchen layout review through to audit day.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Geylang</span><span class="px-2 py-1 border border-line rounded">6 wk</span><span class="px-2 py-1 border border-line rounded">MUIS</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="licensing">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Licensing</span><span class="text-muted">&#9733; 4.6 (16)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Safe Table Consultancy</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Food safety systems, staff hygiene training and mock inspections.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Novena</span><span class="px-2 py-1 border border-line rounded">3 wk</span><span class="px-2 py-1 border border-line rounded">Training</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="cat-food" class="scroll-mt-[150px]">
+    <div class="sticky top-[73px] z-20 bg-paper/95 backdrop-blur border-b border-line py-3 flex items-center gap-4">
+      <span class="w-8 h-8 rounded-md bg-accentsoft text-accent grid place-items-center shrink-0"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10.5h3.6L21 14v2h-7z"/><circle cx="7" cy="18.2" r="1.6"/><circle cx="17" cy="18.2" r="1.6"/></svg></span>
+      <div class="min-w-0"><h2 class="font-display text-lg leading-tight truncate">Food &amp; ingredient distribution</h2><p class="text-xs text-muted">143 suppliers</p></div>
+      <a href="directory.html?category=food" class="ml-auto text-sm text-muted hover:text-ink whitespace-nowrap">View all &rarr;</a>
+    </div>
+    <p class="mt-4 text-sm text-muted leading-relaxed max-w-3xl">Dry goods, dairy, frozen, produce and specialty imports. Filter for the ones that hold small MOQs and give 30-day terms before you have a trading history.</p>
+    <div class="mt-4 space-y-3">
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="food">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Food distribution</span><span class="text-muted">&#9733; 4.5 (61)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Harvest Line Supply</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Dry goods, dairy and frozen. Next-day islandwide delivery from $300 per order.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Jurong</span><span class="px-2 py-1 border border-line rounded">Next day</span><span class="px-2 py-1 border border-line rounded">Halal</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="food">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Food distribution</span><span class="text-muted">&#9733; 4.6 (28)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Kranji Fresh Produce</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Local and imported vegetables, six days a week, with same-day substitutions.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Kranji</span><span class="px-2 py-1 border border-line rounded">Daily</span><span class="px-2 py-1 border border-line rounded">Low MOQ</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+
+      <article class="grid sm:grid-cols-[104px_1fr_auto] gap-5 items-center p-4 bg-white border border-line rounded-lg hover:border-accent transition" data-cat="kitchen">
+        <a href="vendor.html" class="block aspect-[4/3] sm:aspect-square rounded-md overflow-hidden bg-line"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=320&h=320&fit=crop&crop=entropy&q=72" class="w-full h-full object-cover" alt=""></a>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 text-xs"><span class="px-2 py-0.5 rounded bg-accentsoft text-accent">Kitchen equipment</span><span class="text-muted">&#9733; 4.8 (32)</span></div>
+          <h3 class="mt-2 font-display text-lg leading-snug"><a href="vendor.html" class="hover:text-accent">Teck Seng Kitchen Equipment</a></h3>
+          <p class="mt-1 text-sm text-muted leading-relaxed">Commercial ovens, chillers and stainless fabrication. Trade-in on used equipment.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5 text-xs text-muted"><span class="px-2 py-1 border border-line rounded">Tuas</span><span class="px-2 py-1 border border-line rounded">3 wk lead</span><span class="px-2 py-1 border border-line rounded">Since 1987</span></div>
+        </div>
+        <div class="flex sm:flex-col gap-2 sm:w-[124px] shrink-0">
+          <a href="#" class="flex-1 text-center text-sm py-2 rounded-lg bg-wa text-white font-medium">WhatsApp</a>
+          <a href="vendor.html" class="flex-1 text-center text-sm py-2 rounded-lg border border-ink hover:bg-ink hover:text-white transition">Enquire</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+    <div class="border-t border-line pt-8 text-center">
+      <p class="text-muted text-sm">Four of eight categories shown.</p>
+      <a href="directory.html" class="mt-4 inline-block px-6 py-3 rounded-md bg-ink text-white text-sm font-medium hover:bg-accent transition">Open the full directory &rarr;</a>
+    </div>
+  </main>
+
+  <!-- right rail -->
+  <aside class="hidden xl:block xl:sticky xl:top-[92px] xl:self-start space-y-6">
+    <div class="border border-line rounded-lg bg-white p-5">
+      <div class="flex items-baseline justify-between"><h2 class="font-display text-lg">Most enquired</h2><span class="text-xs text-muted">This month</span></div>
+      <ol class="mt-2 divide-y divide-line">
+        <li class="py-3 flex gap-3 items-baseline"><span class="font-display text-sm text-line w-5 shrink-0">01</span><span class="flex-1 min-w-0"><a href="vendor.html" class="text-sm font-medium hover:text-accent block truncate">Harvest Line Supply</a><span class="text-xs text-muted">&#9733; 4.5 &middot; Jurong</span></span></li>
+        <li class="py-3 flex gap-3 items-baseline"><span class="font-display text-sm text-line w-5 shrink-0">02</span><span class="flex-1 min-w-0"><a href="vendor.html" class="text-sm font-medium hover:text-accent block truncate">Studio Kerja</a><span class="text-xs text-muted">&#9733; 4.7 &middot; Kallang</span></span></li>
+        <li class="py-3 flex gap-3 items-baseline"><span class="font-display text-sm text-line w-5 shrink-0">03</span><span class="flex-1 min-w-0"><a href="vendor.html" class="text-sm font-medium hover:text-accent block truncate">Ordersure POS</a><span class="text-xs text-muted">&#9733; 4.4 &middot; Remote</span></span></li>
+        <li class="py-3 flex gap-3 items-baseline"><span class="font-display text-sm text-line w-5 shrink-0">04</span><span class="flex-1 min-w-0"><a href="vendor.html" class="text-sm font-medium hover:text-accent block truncate">Compliance Partners SG</a><span class="text-xs text-muted">&#9733; 4.9 &middot; Bugis</span></span></li>
+        <li class="py-3 flex gap-3 items-baseline"><span class="font-display text-sm text-line w-5 shrink-0">05</span><span class="flex-1 min-w-0"><a href="vendor.html" class="text-sm font-medium hover:text-accent block truncate">Packwell Asia</a><span class="text-xs text-muted">&#9733; 4.3 &middot; Loyang</span></span></li>
+      </ol>
+      <a href="directory.html" class="mt-3 inline-block text-sm text-accent hover:underline">Full ranking &rarr;</a>
+    </div>
+    <div class="border border-line rounded-lg bg-white p-5">
+      <h2 class="font-display text-lg">First time opening?</h2>
+      <p class="mt-2 text-sm text-muted leading-relaxed">Eight steps, in the order operators do them. Each one opens the directory filtered.</p>
+      <a href="#checklist" class="mt-4 inline-block text-sm px-4 py-2 rounded-md border border-ink hover:bg-ink hover:text-white transition">See the checklist</a>
+    </div>
+    <div class="border border-line rounded-lg bg-ink text-white p-5">
+      <h2 class="font-display text-lg">Not sure where to start?</h2>
+      <p class="mt-2 text-sm text-white/70 leading-relaxed">Tell us what you need and we will send four or five curated vendors for your perusal.</p>
+      <a href="#shortlist" class="mt-4 inline-block text-sm px-4 py-2 rounded-md bg-wa font-medium">Get my shortlist</a>
+    </div>
+  </aside>
+</div>
+
+<!-- checklist strip -->
+<section id="checklist" class="border-t border-line bg-white">
+  <div class="mx-auto max-w-[1400px] px-6 py-16">
+    <div class="flex items-end justify-between gap-6">
+      <div class="max-w-xl">
+        <p class="text-xs uppercase tracking-[0.18em] text-accent">Start here</p>
+        <h2 class="font-display text-3xl mt-3">The eight things you need before you open.</h2>
+        <p class="mt-3 text-muted leading-relaxed">In the order most operators do them. Each step opens the directory filtered to the suppliers who handle it.</p>
+      </div>
+      <a href="directory.html" class="text-sm text-muted hover:text-ink whitespace-nowrap">Full directory &rarr;</a>
+    </div>
+    <div class="mt-8 flex gap-3 overflow-x-auto no-scrollbar pb-2"><a href="directory.html?category=fitout" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">1</span><span class="block mt-3 font-medium leading-snug">Secure the unit and check the zoning</span><span class="block mt-2 text-xs text-muted">12 suppliers &rarr;</span></a><a href="directory.html?category=licensing" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">2</span><span class="block mt-3 font-medium leading-snug">Apply for the SFA food shop licence</span><span class="block mt-2 text-xs text-muted">24 suppliers &rarr;</span></a><a href="directory.html?category=fitout" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">3</span><span class="block mt-3 font-medium leading-snug">Commission the fit-out and permits</span><span class="block mt-2 text-xs text-muted">89 suppliers &rarr;</span></a><a href="directory.html?category=kitchen" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">4</span><span class="block mt-3 font-medium leading-snug">Buy or lease kitchen equipment</span><span class="block mt-2 text-xs text-muted">118 suppliers &rarr;</span></a><a href="directory.html?category=food" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">5</span><span class="block mt-3 font-medium leading-snug">Line up ingredient suppliers and terms</span><span class="block mt-2 text-xs text-muted">143 suppliers &rarr;</span></a><a href="directory.html?category=pos" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">6</span><span class="block mt-3 font-medium leading-snug">Choose a POS and payment setup</span><span class="block mt-2 text-xs text-muted">37 suppliers &rarr;</span></a><a href="directory.html?category=packaging" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">7</span><span class="block mt-3 font-medium leading-snug">Order packaging and disposables</span><span class="block mt-2 text-xs text-muted">62 suppliers &rarr;</span></a><a href="directory.html?category=staffing" class="shrink-0 w-[230px] border border-line rounded-lg p-5 bg-white hover:border-accent transition"><span class="font-display text-2xl text-line">8</span><span class="block mt-3 font-medium leading-snug">Hire and train the opening team</span><span class="block mt-2 text-xs text-muted">31 suppliers &rarr;</span></a></div>
+  </div>
+</section>
+
+<section id="shortlist" class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-2 gap-14 items-start">
+    <div>
+      <p class="text-xs uppercase tracking-[0.18em] text-white/50">Curated shortlist</p>
+      <h2 class="font-display text-4xl leading-tight mt-4">Not sure where to start?</h2>
+      <p class="mt-5 text-white/70 leading-relaxed max-w-md">Tell us what you need and we will send you four or five curated vendors for your perusal. No obligation to enquire with any of them.</p>
+      <ul class="mt-7 space-y-2.5 text-sm text-white/60">
+        <li>Matched to your concept, budget and opening date.</li>
+        <li>Each one has worked with a first-time owner in the last year.</li>
+        <li>You choose who to contact. We do not pass on your number.</li>
+      </ul>
+      <a href="#" class="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-md bg-wa text-white font-medium hover:brightness-95"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.06L2 22l5.07-1.33A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-3 .79.8-2.93-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12s-.64.8-.79.97-.29.19-.54.06a6.7 6.7 0 01-3.3-2.89c-.25-.43.25-.4.71-1.32a.45.45 0 000-.42c-.06-.13-.56-1.35-.77-1.84s-.4-.43-.56-.43h-.48a.92.92 0 00-.67.31A2.8 2.8 0 005.8 11a4.86 4.86 0 001 2.55 11.1 11.1 0 004.26 3.77c1.59.69 2.21.75 3 .63a2.55 2.55 0 001.68-1.19 2.08 2.08 0 00.15-1.18c-.06-.11-.23-.18-.48-.3z"/></svg> Ask on WhatsApp instead</a>
+    </div>
+    <form class="bg-white text-ink rounded-lg p-7">
+      <h3 class="font-medium">Tell us what you need</h3>
+      <div class="mt-5 grid sm:grid-cols-2 gap-3">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Your name">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Business name">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Mobile">
+        <input class="border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="Target opening date">
+      </div>
+      <textarea rows="3" class="mt-3 w-full border border-line rounded-lg px-4 py-3 text-sm outline-none focus:border-ink" placeholder="What are you opening? e.g. 40-seat caf&eacute;, need equipment and fit-out"></textarea>
+      <button class="mt-4 w-full bg-ink text-white rounded-lg py-3 text-sm font-medium hover:bg-accent transition">Get my shortlist</button>
+      <p class="mt-3 text-xs text-muted">We reply by WhatsApp within one working day.</p>
+    </form>
+  </div>
+</section>
+<footer class="bg-ink text-white/60 border-t border-white/10">
+  <div class="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-4 gap-8 text-sm">
+    <div><p class="font-display text-2xl text-white">mise<span class="text-accent">.</span></p><p class="mt-3 leading-relaxed">The supplier directory for new F&amp;B businesses in Singapore.</p></div>
+    <div><p class="text-white mb-3">Categories</p><ul class="space-y-2"><li><a href="directory.html?category=kitchen" class="hover:text-white">Kitchen equipment</a></li><li><a href="directory.html?category=food" class="hover:text-white">Food distribution</a></li><li><a href="directory.html?category=pos" class="hover:text-white">POS systems</a></li><li><a href="directory.html?category=fitout" class="hover:text-white">Fit-out</a></li></ul></div>
+    <div><p class="text-white mb-3">For suppliers</p><ul class="space-y-2"><li><a href="#" class="hover:text-white">List your business</a></li><li><a href="#" class="hover:text-white">Pricing</a></li><li><a href="#" class="hover:text-white">Success stories</a></li></ul></div>
+    <div><p class="text-white mb-3">Company</p><ul class="space-y-2"><li><a href="#" class="hover:text-white">About</a></li><li><a href="#" class="hover:text-white">Opening guides</a></li><li><a href="#" class="hover:text-white">Contact</a></li></ul></div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs">&copy; 2026 Mise. Layout mockup.</div>
+</footer>
+
+</body>
+</html>
